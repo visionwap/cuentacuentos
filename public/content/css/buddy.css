@@ -5908,6 +5908,11 @@ h6 {
 #Top_bar a#search_button {
 	margin-right: 30px;
 }
+
+Top_bar a .text_on_menu {
+	margin-right: 30px;
+}
+
 #Top_bar a.responsive-menu-toggle {
 	color: #fff;
 }

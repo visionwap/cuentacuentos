@@ -5,7 +5,7 @@ namespace Cuentacuentos\Http\Controllers;
 use Cuentacuentos\User;
 use Illuminate\Http\Request;
 
-class MemberController extends Controller
+class MembersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +15,10 @@ class MemberController extends Controller
     public function index()
     {
         //
+    }
+
+    public function search() {
+      return "Aqui se van a buscar a los usuarios";
     }
 
     /**

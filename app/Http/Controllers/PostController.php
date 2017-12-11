@@ -16,6 +16,10 @@ class PostController extends Controller
         //
     }
 
+    public function search() {
+      return "Aqui se van a desplegar los post que hagan los usuarios";
+    }
+
     /**
      * Show the form for creating a new resource.
      *

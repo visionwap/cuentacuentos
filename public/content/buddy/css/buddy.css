@@ -5908,6 +5908,12 @@ h6 {
 #Top_bar a#search_button {
 	margin-right: 30px;
 }
+#Top_bar a#signin {
+	margin-right: 30px;
+}
+#Top_bar a#signout {
+	margin-right: 30px;
+}
 #Top_bar a.responsive-menu-toggle {
 	color: #fff;
 }
