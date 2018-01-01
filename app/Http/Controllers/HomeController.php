@@ -14,6 +14,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('welcome',
+        [
+          'popular_members' => [],
+          'recent_members'  => []
+        ]);
     }
 }

@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
 /.idea
 /.vagrant
-Homestead.json
-Homestead.yaml
-npm-debug.log
 yarn-error.log
-.env
-=======
 vendor/
 node_modules/
 npm-debug.log
@@ -32,4 +21,4 @@ Homestead.json
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
->>>>>>> c6472654c06550ad737a1914cd4c9cd1e46e55e2
+public/bower_composer

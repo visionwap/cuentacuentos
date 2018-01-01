@@ -17,6 +17,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/tails/{category}', 'TailsController@search')->name('tails');
 
 Route::get('/members/{category}', 'MembersController@search')->name('members');
+Route::get('/member/{username}', 'MembersController@show')->name('show.member');
+Route::get('/member/avatar/{username}', 'MembersController@show')->name('show.avatar.member');
 
 Route::get('/auth/signin', 'LoginController@show')->name('auth.signin');
 Route::get('/auth/signup', 'AuthController@signup')->name('auth.signup');

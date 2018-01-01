@@ -36,57 +36,6 @@
   <div class="content_wrapper clearfix">
     <div class="sections_group">
       <div class="entry-content">
-        <div class="section section-border-bottom " style="padding-top:60px; padding-bottom:20px; background-color:#f2f5f7">
-          <div class="section_wrapper clearfix">
-            <div class="items_group clearfix">
-              <!-- One Third (1/3) Column -->
-              <div class="column one-third column_icon_box buddy_icon_box">
-                <div class="icon_box icon_position_left no_border">
-                  <a class="" href="#">
-                    <div class="image_wrapper"><img src="content/buddy/images/home_buddy_iconbox1.png" alt="Manage your profile" class="scale-with-grid" width="80" height="80" />
-                    </div>
-                    <div class="desc_wrapper">
-                      <h4>Manage your profile</h4>
-                      <div class="desc">
-                        Nam finibus mauris erat ac dapibus
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <!-- One Third (1/3) Column -->
-              <div class="column one-third column_icon_box buddy_icon_box">
-                <div class="icon_box icon_position_left no_border">
-                  <a class="" href="#">
-                    <div class="image_wrapper"><img src="content/buddy/images/home_buddy_iconbox2.png" alt="Share your pashion" class="scale-with-grid" width="80" height="80" />
-                    </div>
-                    <div class="desc_wrapper">
-                      <h4>Share your pashion</h4>
-                      <div class="desc">
-                        Cras eleifend dignissim mauris non
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <!-- One Third (1/3) Column -->
-              <div class="column one-third column_icon_box buddy_icon_box">
-                <div class="icon_box icon_position_left no_border">
-                  <a class="" href="#">
-                    <div class="image_wrapper"><img src="content/buddy/images/home_buddy_iconbox3.png" alt="Create new things" class="scale-with-grid" width="80" height="80" />
-                    </div>
-                    <div class="desc_wrapper">
-                      <h4>Create new things</h4>
-                      <div class="desc">
-                        Maecenas purus massa dictum
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="section sections_style_3">
           <div class="section_wrapper clearfix">
             <div class="items_group clearfix">
@@ -94,27 +43,29 @@
               <div class="column one-fourth column_sidebar_widget ">
                 <aside id="bp_core_login_widget-5" class="widget widget_bp_core_login_widget buddypress widget">
                   <h3>Inicio</h3>
-                  <form name="bp-login-form" id="bp-login-widget-form" class="standard-form" action="#">
-                    <label for="bp-login-widget-user-login">Username</label>
+                  <form name="bp-login-form" id="bp-login-widget-form" class="standard-form" action="{{ route('auth.signin') }}">
+                    <label for="bp-login-widget-user-login">Usuario o email</label>
                     <input type="text" name="log" id="bp-login-widget-user-login" class="input" value="" />
-                    <label for="bp-login-widget-user-pass">Password</label>
+                    <label for="bp-login-widget-user-pass">Contraseña</label>
                     <input type="password" name="pwd" id="bp-login-widget-user-pass" class="input" value="" spellcheck="false" autocomplete="off" />
                     <div class="forgetmenot">
                       <label>
-                        <input name="rememberme" type="checkbox" id="bp-login-widget-rememberme" value="forever" /> Remember Me</label>
+                        <input name="rememberme" type="checkbox" id="bp-login-widget-rememberme" value="forever" /> Recuerdame</label>
                       </div>
-                      <input type="submit" name="wp-submit" id="bp-login-widget-submit" value="Log In" />
+                      <button type="button" name="button" id="bp-login-widget-submit">Iniciar</button>
                     </form>
                   </aside>
                   <aside id="bp_core_members_widget-4" class="widget widget_bp_core_members_widget buddypress widget">
-                    <h3>Members</h3>
+                    <h3>Miembros</h3>
                     <div class="item-options" id="members-list-options">
-                      <a href="content/buddy/members.html" id="newest-members">Newest</a> | <a href="content/buddy/members.html" id="recently-active-members" class="selected">Active</a>
+                      <a href="{{ route('members', ['category'=>'nuevos']) }}" id="newest-members">Nuevos</a> | <a href="content/buddy/members.html" id="recently-active-members" class="selected">Active</a>
                     </div>
                     <ul id="members-list" class="item-list">
+                      @foreach($popular_members as $member)
                       <li class="vcard">
                         <div class="item-avatar">
-                          <a href="content/buddy/member-activity.html" title="admin"><img src="content/buddy/images/avatar.jpg" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of admin" />
+                          <a href="{{ route('show.member', ['username' => $member->username ]) }}" title="admin">
+                            <img src="{{ route('show.avatar.member', ['username' => $member->username]) }}" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="{{ $member->first_name }} {{ $member->last_name }}" />
                           </a>
                         </div>
                         <div class="item">
@@ -126,62 +77,7 @@
                           </div>
                         </div>
                       </li>
-                      <li class="vcard">
-                        <div class="item-avatar">
-                          <a href="content/buddy/member-profile.html" title="Wynonna Judd"><img src="content/buddy/images/avatar.jpg" class="avatar user-16-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Wynonna Judd" />
-                          </a>
-                        </div>
-                        <div class="item">
-                          <div class="item-title fn">
-                            <a href="content/buddy/member-profile.html" title="Wynonna Judd">Wynonna Judd</a>
-                          </div>
-                          <div class="item-meta">
-                            <span class="activity">active 1 month, 1 week ago</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="vcard">
-                        <div class="item-avatar">
-                          <a href="content/buddy/member-profile.html" title="Monta Ellis"><img src="content/buddy/images/avatar.jpg" class="avatar user-9-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Monta Ellis" />
-                          </a>
-                        </div>
-                        <div class="item">
-                          <div class="item-title fn">
-                            <a href="content/buddy/member-profile.html" title="Monta Ellis">Monta Ellis</a>
-                          </div>
-                          <div class="item-meta">
-                            <span class="activity">active 1 month, 1 week ago</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="vcard">
-                        <div class="item-avatar">
-                          <a href="content/buddy/member-profile.html" title="Kiki Cuyler"><img src="content/buddy/images/avatar.jpg" class="avatar user-4-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Kiki Cuyler" />
-                          </a>
-                        </div>
-                        <div class="item">
-                          <div class="item-title fn">
-                            <a href="content/buddy/member-profile.html" title="Kiki Cuyler">Kiki Cuyler</a>
-                          </div>
-                          <div class="item-meta">
-                            <span class="activity">active 1 month, 1 week ago</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="vcard">
-                        <div class="item-avatar">
-                          <a href="content/buddy/member-profile.html" title="Ron Faucheux"><img src="content/buddy/images/avatar.jpg" class="avatar user-7-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of Ron Faucheux" />
-                          </a>
-                        </div>
-                        <div class="item">
-                          <div class="item-title fn">
-                            <a href="content/buddy/member-profile.html" title="Ron Faucheux">Ron Faucheux</a>
-                          </div>
-                          <div class="item-meta">
-                            <span class="activity">active 1 month, 1 week ago</span>
-                          </div>
-                        </div>
-                      </li>
+                      @endforeach
                     </ul>
                     <input type="hidden" id="_wpnonce-members" name="_wpnonce-members" value="743b80a2cf" />
                     <input type="hidden" name="members_widget_max" id="members_widget_max" value="5" />
@@ -583,6 +479,58 @@
             </div>
           </div>
         </div>
+        <div class="section section-border-bottom " style="padding-top:60px; padding-bottom:20px; background-color:#f2f5f7">
+          <div class="section_wrapper clearfix">
+            <div class="items_group clearfix">
+              <!-- One Third (1/3) Column -->
+              <div class="column one-third column_icon_box buddy_icon_box">
+                <div class="icon_box icon_position_left no_border">
+                  <a class="" href="#">
+                    <div class="image_wrapper"><img src="content/buddy/images/home_buddy_iconbox1.png" alt="Manage your profile" class="scale-with-grid" width="80" height="80" />
+                    </div>
+                    <div class="desc_wrapper">
+                      <h4>Manage your profile</h4>
+                      <div class="desc">
+                        Nam finibus mauris erat ac dapibus
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- One Third (1/3) Column -->
+              <div class="column one-third column_icon_box buddy_icon_box">
+                <div class="icon_box icon_position_left no_border">
+                  <a class="" href="#">
+                    <div class="image_wrapper"><img src="content/buddy/images/home_buddy_iconbox2.png" alt="Share your pashion" class="scale-with-grid" width="80" height="80" />
+                    </div>
+                    <div class="desc_wrapper">
+                      <h4>Share your pashion</h4>
+                      <div class="desc">
+                        Cras eleifend dignissim mauris non
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- One Third (1/3) Column -->
+              <div class="column one-third column_icon_box buddy_icon_box">
+                <div class="icon_box icon_position_left no_border">
+                  <a class="" href="#">
+                    <div class="image_wrapper"><img src="content/buddy/images/home_buddy_iconbox3.png" alt="Create new things" class="scale-with-grid" width="80" height="80" />
+                    </div>
+                    <div class="desc_wrapper">
+                      <h4>Create new things</h4>
+                      <div class="desc">
+                        Maecenas purus massa dictum
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
