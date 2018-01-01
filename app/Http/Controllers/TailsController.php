@@ -1,6 +1,6 @@
 <?php
 
-namespace Cuentacuentos\Http\Controllers;
+namespace CuentaCuentos\Http\Controllers;
 
 use Illuminate\Http\Request;
 

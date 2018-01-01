@@ -23,7 +23,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "Cuentacuentos\\": "app/"
+            "CuentaCuentos\\": "app/"
         }
     },
     "autoload-dev": {

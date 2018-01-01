@@ -1,8 +1,8 @@
 <?php
 
-namespace Cuentacuentos\Http\Controllers\Auth;
+namespace CuentaCuentos\Http\Controllers\Auth;
 
-use Cuentacuentos\Http\Controllers\Controller;
+use CuentaCuentos\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller

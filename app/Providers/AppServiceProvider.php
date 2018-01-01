@@ -1,6 +1,6 @@
 <?php
 
-namespace Cuentacuentos\Providers;
+namespace CuentaCuentos\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
