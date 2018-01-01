@@ -1,9 +1,9 @@
 <?php
 
-namespace Cuentacuentos\Http\Controllers\Auth;
+namespace CuentaCuentos\Http\Controllers\Auth;
 
-use Cuentacuentos\User;
-use Cuentacuentos\Http\Controllers\Controller;
+use CuentaCuentos\User;
+use CuentaCuentos\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -58,7 +58,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \Cuentacuentos\User
+     * @return \CuentaCuentos\User
      */
     protected function create(array $data)
     {

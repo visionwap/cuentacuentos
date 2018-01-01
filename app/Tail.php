@@ -1,6 +1,6 @@
 <?php
 
-namespace Cuentacuentos;
+namespace CuentaCuentos;
 
 use Illuminate\Database\Eloquent\Model;
 

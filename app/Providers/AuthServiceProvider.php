@@ -1,6 +1,6 @@
 <?php
 
-namespace Cuentacuentos\Providers;
+namespace CuentaCuentos\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Cuentacuentos\Model' => 'Cuentacuentos\Policies\ModelPolicy',
+        'CuentaCuentos\Model' => 'CuentaCuentos\Policies\ModelPolicy',
     ];
 
     /**

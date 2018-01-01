@@ -1,6 +1,6 @@
 <?php
 
-namespace Cuentacuentos\Providers;
+namespace CuentaCuentos\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Cuentacuentos\Events\Event' => [
-            'Cuentacuentos\Listeners\EventListener',
+        'CuentaCuentos\Events\Event' => [
+            'CuentaCuentos\Listeners\EventListener',
         ],
     ];
 

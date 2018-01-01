@@ -1,8 +1,8 @@
 <?php
 
-namespace Cuentacuentos\Http\Controllers;
+namespace CuentaCuentos\Http\Controllers;
 
-use Cuentacuentos\User;
+use CuentaCuentos\User;
 use Illuminate\Http\Request;
 
 class MembersController extends Controller
@@ -45,7 +45,7 @@ class MembersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Cuentacuentos\User  $user
+     * @param  \CuentaCuentos\User  $user
      * @return \Illuminate\Http\Response
      */
     public function show(User $user)
@@ -56,7 +56,7 @@ class MembersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \Cuentacuentos\User  $user
+     * @param  \CuentaCuentos\User  $user
      * @return \Illuminate\Http\Response
      */
     public function edit(User $user)
@@ -68,7 +68,7 @@ class MembersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Cuentacuentos\User  $user
+     * @param  \CuentaCuentos\User  $user
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user)
@@ -79,7 +79,7 @@ class MembersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Cuentacuentos\User  $user
+     * @param  \CuentaCuentos\User  $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)

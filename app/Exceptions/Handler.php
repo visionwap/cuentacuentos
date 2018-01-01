@@ -1,6 +1,6 @@
 <?php
 
-namespace Cuentacuentos\Exceptions;
+namespace CuentaCuentos\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

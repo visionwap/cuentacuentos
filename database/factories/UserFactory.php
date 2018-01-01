@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(Cuentacuentos\User::class, function (Faker $faker) {
+$factory->define(CuentaCuentos\User::class, function (Faker $faker) {
     static $password;
 
     return [
