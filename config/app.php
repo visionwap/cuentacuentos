@@ -177,6 +177,8 @@ return [
         CuentaCuentos\Providers\EventServiceProvider::class,
         CuentaCuentos\Providers\RouteServiceProvider::class,
 
+        // Sentinel service provider
+        Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
 
     ],
 
@@ -227,6 +229,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // Sentinel aliases
+        'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
+        'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
+        'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
     ],
 
 ];

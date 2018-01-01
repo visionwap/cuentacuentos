@@ -19,7 +19,6 @@
 
 </style>
 <div id="signup-modal" class="modal fade" role="dialog">
-  <form name="bp-login-form" id="bp-login-widget-form" class="standard-form form-horizontal" action="{{ route('auth.signin') }}">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -28,25 +27,26 @@
       </div>
 
       <div class="modal-body">
-        <div class="form-group">
+        <form class="form-horizontal" action="{{ route('auth.signup') }}">
+        {{ csrf_field() }}
+        <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
           <label for="bp-login-widget-user-login">Nombre</label>
           <input type="text" name="log" id="bp-login-widget-user-login" class="input form-control" value="" />
+        </div>
+        <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
           <label for="bp-login-widget-user-login">Username o email</label>
           <input type="text" name="log" id="bp-login-widget-user-login" class="input form-control" value="" />
+        </div>
+        <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
           <label for="bp-login-widget-user-pass">Contraseña</label>
           <input type="password" name="pwd" id="bp-login-widget-user-pass" class="input form-control" value="" spellcheck="false" autocomplete="off" />
-          <div class="forgetmenot">
-            <label>
-              <input name="rememberme" type="checkbox" id="bp-login-widget-rememberme" value="forever" /> Recuerdame</label>
-            </div>
         </div>
+        <input type="submit" name="wp-submit" id="bp-login-widget-submit" value="Iniciar" />
+        </form>
       </div>
 
-      <div class="modal-footer">
-        <input type="submit" name="wp-submit" id="bp-login-widget-submit" value="Iniciar" />
-      </div>
+
 
     </div>
   </div>
-</form>
 </div>
